@@ -11,26 +11,92 @@ This is an ipm package, which contains one or more reusable assets within the ip
 
 ## Setup
 
-_Add any setup instructions, such as an API Key_
-
-## API
-
-_Document your API here_
+Follow Wiser Pilot Installation Kit from Wiser Representative
 
 ## Usage
 
-_Describe assets_
-
 ### Code Services
+
+`Example` - Fetch Passive Tag Positions
 
 ### Code Libraries
 
-### Portals
+`Wiser` - Library for interacting with Wiser Wireless Tracking System
 
-### Collections
-
-### ...
 
 ## Thank you
 
 Powered by ClearBlade Enterprise IoT Platform: [https://platform.clearblade.com](https://platform.clearblade.com)
+<a name="Wiser"></a>
+
+## API
+
+### Wiser(hostURI)
+Wiser Library for interacting with Wiser Wireless Tracking server
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| hostURI | <code>string</code> | URI of server running Wiser software, ex "http://192.168.0.220:8080" |
+
+
+* [Wiser(hostURI)](#Wiser)
+    * [~fetchPassiveTags()](#Wiser..fetchPassiveTags) ⇒ <code>Array.&lt;Object&gt;</code>
+    * [~queryPassiveTags(list, array)](#Wiser..queryPassiveTags)
+
+<a name="Wiser..fetchPassiveTags"></a>
+
+#### Wiser~fetchPassiveTags() ⇒ <code>Array.&lt;Object&gt;</code>
+Fetch all passive tags
+
+**Kind**: inner method of [<code>Wiser</code>](#Wiser)  
+**Returns**: <code>Array.&lt;Object&gt;</code> - Array of Passive Tag Objects  
+**Example**  
+```js
+[{
+		"battery": 1,
+		"id": 41021,
+		"report": {
+			"id": 214,
+			"tag": 41021,
+			"error": 0.69650248573048179,
+			"location": {
+				"x": 248.27271695939552,
+				"y": 598.39472000389388,
+				"z": 0
+			},
+			"numanchors": 4,
+			"timestamp": 82349382
+		}
+	},
+	{
+		"battery": 0.5,
+		"id": 41022,
+		"report": {
+			"id": 215,
+			"tag": 41022,
+			"error": 0.923847293848293432,
+			"location": {
+				"x": 235.12342342333839,
+				"y": 859.29384762938483,
+				"z": 0
+			},
+			"numanchors": 4,
+			"timestamp": 823498392
+		}
+	}
+]
+```
+<a name="Wiser..queryPassiveTags"></a>
+
+#### Wiser~queryPassiveTags(list, array)
+Perform a query of Wiser Passive Tags
+
+**Kind**: inner method of [<code>Wiser</code>](#Wiser)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| list | <code>Array.&lt;string&gt;</code> | of filters, ex ["battery", "report","id"] |
+| array | <code>Array.&lt;Object&gt;</code> | of query objects, ex [{report:location:x_above:100},{report:location:x_below:400}] |
+
