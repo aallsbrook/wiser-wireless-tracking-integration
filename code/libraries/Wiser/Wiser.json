@@ -1,0 +1,8 @@
+{
+    "api": "",
+    "dependencies": "http,log",
+    "description": "Library for interacting with Wiser Systems Wireless Tracking",
+    "name": "Wiser",
+    "version": 39,
+    "visibility": "system"
+}
