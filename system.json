@@ -1,0 +1,34 @@
+{
+    "auth": true,
+    "deployments": [
+        {
+            "assets": [
+                {
+                    "asset_class": "services",
+                    "asset_id": "",
+                    "deployment": "CBOffice",
+                    "member": "CBOffice_deployment_edge_group",
+                    "sync": true
+                },
+                {
+                    "asset_class": "libraries",
+                    "asset_id": "",
+                    "deployment": "CBOffice",
+                    "member": "CBOffice_deployment_edge_group",
+                    "sync": true
+                }
+            ],
+            "description": "ClearBlade Office Tracking",
+            "edges": [
+                "TrackingPi"
+            ],
+            "name": "CBOffice"
+        }
+    ],
+    "description": "",
+    "messaging_url": "staging.clearblade.com:1883",
+    "name": "WiserIndoorGPS",
+    "platform_url": "https://staging.clearblade.com",
+    "system_key": "c284fcac0bc0cb8fdb98b3e6896a",
+    "system_secret": "C284FCAC0BB6C4E399FDD7FBE08801"
+}
