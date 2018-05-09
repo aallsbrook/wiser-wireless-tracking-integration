@@ -9,6 +9,8 @@ This is an ipm package, which contains one or more reusable assets within the ip
 
 [Browse ipm Packages](https://ipm.clearblade.com)
 
+[![Live demonstration](https://img.youtube.com/vi/Q3kzf1_dGBY/0.jpg)](https://www.youtube.com/watch?v=Q3kzf1_dGBY)
+
 ## Setup
 
 Follow Wiser Pilot Installation Kit from Wiser Representative
